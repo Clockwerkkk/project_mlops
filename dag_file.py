@@ -17,12 +17,12 @@ from datetime import datetime, timedelta
 BUCKET = Variable.get("S3_BUCKET")
 
 DEFAULT_ARGS = {
-    'owner': 'igorpoletaev',  # Ваше ФИ
-    'depends_on_past': False,  # Не зависит от прошлых запусков
-    'email_on_failure': False,  # Отключаем уведомления о сбоях
-    'email_on_retry': False,  # Отключаем уведомления при ретраях
-    'retries': 3,  # Три попытки при сбое
-    'retry_delay': timedelta(minutes=1),  # Задержка между ретраями — 1 минута
+    'owner': 'igorpoletaev',
+    'depends_on_past': False,
+    'email_on_failure': False,
+    'email_on_retry': False,
+    'retries': 3,
+    'retry_delay': timedelta(minutes=1),
 }
 
 model_names = ["random_forest", "linear_regression", "decision_tree"]
@@ -47,7 +47,6 @@ def init(**kwargs) -> Dict[str, Any]:
     configure_mlflow()
     experiment_name = "igor_poletaev"
     
-    # Установка или создание эксперимента
     if not mlflow.get_experiment_by_name(experiment_name):
         mlflow.create_experiment(experiment_name)
     mlflow.set_experiment(experiment_name)
