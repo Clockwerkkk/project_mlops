@@ -145,8 +145,8 @@ services:
       MLFLOW_S3_ENDPOINT_URL: https://storage.yandexcloud.net
       # Здесь они нужны для доступа из UI
       AWS_ENDPOINT_URL: https://storage.yandexcloud.net
-      AWS_ACCESS_KEY_ID: 'YCAJEJcYANDaZxiLfv_rwqY5X'
-      AWS_SECRET_ACCESS_KEY: 'YCN-rkdcrzwluJ0vg77ZVQMlCyxKvOgkmQmmMQW2'
+      AWS_ACCESS_KEY_ID: !!! здесь были мои креды !!! 
+      AWS_SECRET_ACCESS_KEY: !!! здесь были мои креды !!! 
       AWS_DEFAULT_REGION: ru-central1
     command:
       - bash
@@ -175,8 +175,8 @@ services:
       MLFLOW_TRACKING_URI: http://mlflow-service:5000
       # Здесь они нужны для отправки артефактов в S3
       AWS_ENDPOINT_URL: https://storage.yandexcloud.net
-      AWS_ACCESS_KEY_ID: 'YCAJEJcYANDaZxiLfv_rwqY5X'
-      AWS_SECRET_ACCESS_KEY: 'YCN-rkdcrzwluJ0vg77ZVQMlCyxKvOgkmQmmMQW2'
+      AWS_ACCESS_KEY_ID: !!! здесь были мои креды !!! 
+      AWS_SECRET_ACCESS_KEY: !!! здесь были мои креды !!! 
       AWS_DEFAULT_REGION: ru-central1
     depends_on:
       - mlflow-service
